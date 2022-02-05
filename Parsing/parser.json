@@ -1,0 +1,1 @@
+{"joke": {"func": "fun.joke"}, "weather": {"func": "weather.weather", "subcommands": ["today", "tomorrow", "week"]}, "time": {"func": "general.time"}, "date": {"func": "general.date"}, "how are you": {"func": "general.greeting"}}

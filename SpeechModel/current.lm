@@ -1,0 +1,106 @@
+Language model created by QuickLM on Thu Jan 20 13:08:33 EST 2022
+Copyright (c) 1996-2010 Carnegie Mellon University and Alexander I. Rudnicky
+
+The model is in standard ARPA format, designed by Doug Paul while he was at MITRE.
+
+The code that was used to produce this language model is available in Open Source.
+Please visit http://www.speech.cs.cmu.edu/tools/ for more information
+
+The (fixed) discount mass is 0.5. The backoffs are computed using the ratio method.
+This model based on a corpus of 12 sentences and 21 words
+
+\data\
+ngram 1=21
+ngram 2=33
+ngram 3=29
+
+\1-grams:
+-0.9927 </s> -0.3010
+-0.9927 <s> -0.2462
+-2.0719 A -0.2973
+-2.0719 ARE -0.2973
+-2.0719 DATE -0.2545
+-2.0719 HELLO -0.2545
+-2.0719 HOW -0.2973
+-2.0719 IS -0.2861
+-2.0719 JOKE -0.2545
+-1.4698 ME -0.2822
+-1.7709 MIRROR -0.2462
+-1.4698 TELL -0.2861
+-1.4698 THE -0.2705
+-2.0719 THIS -0.2936
+-1.7709 TIME -0.2545
+-2.0719 TODAY -0.2545
+-2.0719 TOMORROW -0.2545
+-1.3729 WEATHER -0.2335
+-1.7709 WEEK -0.2545
+-2.0719 WHAT -0.2973
+-2.0719 YOU -0.2545
+
+\2-grams:
+-1.3802 <s> HELLO 0.0000
+-1.3802 <s> HOW 0.0000
+-1.3802 <s> MIRROR -0.1761
+-0.7782 <s> TELL 0.0000
+-0.7782 <s> WEATHER -0.0792
+-1.3802 <s> WHAT 0.0000
+-0.3010 A JOKE 0.0000
+-0.3010 ARE YOU 0.0000
+-0.3010 DATE </s> -0.3010
+-0.3010 HELLO </s> -0.3010
+-0.3010 HOW ARE 0.0000
+-0.3010 IS THE -0.1761
+-0.3010 JOKE </s> -0.3010
+-0.9031 ME A 0.0000
+-0.4260 ME THE 0.0000
+-0.6021 MIRROR </s> -0.3010
+-0.6021 MIRROR MIRROR -0.1761
+-0.3010 TELL ME 0.0000
+-0.9031 THE DATE 0.0000
+-0.6021 THE TIME 0.0000
+-0.9031 THE WEATHER -0.2553
+-0.3010 THIS WEEK 0.0000
+-0.3010 TIME </s> -0.3010
+-0.3010 TODAY </s> -0.3010
+-0.3010 TOMORROW </s> -0.3010
+-1.0000 WEATHER </s> -0.3010
+-1.0000 WEATHER THIS 0.0000
+-1.0000 WEATHER TODAY 0.0000
+-1.0000 WEATHER TOMORROW 0.0000
+-1.0000 WEATHER WEEK 0.0000
+-0.3010 WEEK </s> -0.3010
+-0.3010 WHAT IS 0.0000
+-0.3010 YOU </s> -0.3010
+
+\3-grams:
+-0.3010 <s> HELLO </s>
+-0.3010 <s> HOW ARE
+-0.3010 <s> MIRROR MIRROR
+-0.3010 <s> TELL ME
+-0.9031 <s> WEATHER THIS
+-0.9031 <s> WEATHER TODAY
+-0.9031 <s> WEATHER TOMORROW
+-0.9031 <s> WEATHER WEEK
+-0.3010 <s> WHAT IS
+-0.3010 A JOKE </s>
+-0.3010 ARE YOU </s>
+-0.3010 HOW ARE YOU
+-0.3010 IS THE TIME
+-0.3010 ME A JOKE
+-0.7782 ME THE DATE
+-0.7782 ME THE TIME
+-0.7782 ME THE WEATHER
+-0.3010 MIRROR MIRROR </s>
+-0.9031 TELL ME A
+-0.4260 TELL ME THE
+-0.3010 THE DATE </s>
+-0.3010 THE TIME </s>
+-0.3010 THE WEATHER </s>
+-0.3010 THIS WEEK </s>
+-0.3010 WEATHER THIS WEEK
+-0.3010 WEATHER TODAY </s>
+-0.3010 WEATHER TOMORROW </s>
+-0.3010 WEATHER WEEK </s>
+-0.3010 WHAT IS THE
+
+\end\
