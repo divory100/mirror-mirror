@@ -6,6 +6,7 @@ __pycache__/
 #Private files
 openweathermap_key.json
 bus_api_key.txt
+newsapi_key.txt
 
 #Audio output file
 response.mp3

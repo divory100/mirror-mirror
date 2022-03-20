@@ -10,3 +10,6 @@ weather tomorrow
 weather week
 weather this week
 mirror mirror
+news
+world
+britain

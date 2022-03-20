@@ -1,1 +1,1 @@
-{"joke": {"func": "fun.joke"}, "weather": {"func": "weather.weather", "subcommands": ["today", "tomorrow", "week"]}, "time": {"func": "general.time"}, "date": {"func": "general.date"}, "how are you": {"func": "general.greeting"}}
+{"news": {"func": "info.news", "subcommands": ["britain", "world"]}, "joke": {"func": "fun.joke"}, "weather": {"func": "weather.weather", "subcommands": ["today", "tomorrow", "week"]}, "time": {"func": "general.time"}, "date": {"func": "general.date"}, "how are you": {"func": "general.greeting"}}
