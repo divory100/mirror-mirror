@@ -34,7 +34,7 @@ def screen_handler(queue):
             action = queue.get() #get any data that the main thread has put on the queue
             window = clear_screen(window)
             window = command_graphics(window, action) #display the "action" the command sent on the screen.
-        if command_counter == 10:
+        if command_counter == 30:
             window = default_display(window, cur_weather) #clear the command action; show default display
         if weather_counter == 1800:
             cur_weather = current_weather()

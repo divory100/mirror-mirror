@@ -2,6 +2,10 @@ import json
 from Modules import general
 from Modules import weather
 from Modules import fun
+from Modules import info
+
+with open("Parsing/parser.json", "r") as fp:
+    COMMANDS = json.load(fp)
 
 def execute(command):
     """
@@ -9,7 +13,7 @@ def execute(command):
     Returns a speech response and action (dictionary)
     The action is instructions on which graphics element to edit, eg TEXT_M is the main text slot
     """
-    COMMANDS = ["weather", "time", "date", "how are you", "joke"]
+    #COMMANDS = ["weather", "time", "date", "how are you", "joke", "news"]
 
     #open the json file which stores all the detailed command data
     with open("Parsing/parser.json", "r") as p:
