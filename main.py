@@ -7,6 +7,7 @@ from playsound import playsound
 from queue import Queue
 import threading
 import sounddevice
+import sys
 import websockets
 
 URI = "ws://localhost:2700"
@@ -70,6 +71,12 @@ async def main():
                     output = gTTS(response)
                     output.save("response.mp3")
                     playsound("response.mp3")
+
+                    if response == "Goodbye!":
+                        #shutdown required
+                        await ws.send(EOF) #send EOF to websocket
+                        sys.exit()
+
 
             await ws.send(EOF)
 

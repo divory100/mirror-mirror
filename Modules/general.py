@@ -2,6 +2,10 @@ import datetime
 import random
 import requests
 
+def shutdown():
+    return {"speech": "Goodbye!", "action": None}
+
+
 def time(subcommand=None):
     """Command to reply with the current time (24H)"""
     return {"speech": f"The current time is {datetime.datetime.now().strftime('%H:%M')}", \
