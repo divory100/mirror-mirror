@@ -16,8 +16,8 @@ The program uses pocketsphinx to listen for voice commands, while in the backgro
  - definitions
 
  The assistant listens for keywords, not phrases, for example:
- "assistant tell me a joke" - this will work
- "assistant tell a joke" - this will also work
+  - "assistant tell me a joke" - this will work
+  - "assistant tell a joke" - this will also work
 
  The default wake word is "assistant"; this can be changed on lines 59 and 60 of main.py.
 
@@ -52,8 +52,6 @@ This project uses the VOSK speech recognition API, and requires a VOSK server to
 
  - For ARM (also works on x86/amd64):
     1. Clone the vosk server repository https://github.com/alphacep/vosk-server/
-    2. Download a language model https://alphacephei.com/vosk/models
-     - I'm running this project on a raspberry pi 4, for which I found the en-us small model worked best - I didn't have enough RAM to use the normal sized model.
-       There wasn't much of a quality difference.
+    2. Download a language model https://alphacephei.com/vosk/models - I'm running this project on a raspberry pi 4, for which I found the en-us small model worked best - I didn't have enough RAM to use the normal sized model. Otherwise however the normal model is useful as it is slightly more accurate.
     3. Extract the model into a directory called "model" which is itself in the `vosk-server/websocket/` directory. (alternatively put it in the `vosk-server/websocket-cpp/` folder if you are going to run the CPP version of the server)
     4. Run the server - either `asr_server.py` if you're using the python version in `vosk-server/websocket/`, or `asr_server.cpp` if you're using the CPP version in `vosk-server/websocket-cpp/` directory.
