@@ -4,7 +4,6 @@ from gtts import gTTS
 import json
 from Parsing import commands
 from playsound import playsound
-import pocketsphinx as ps
 from queue import Queue
 import threading
 import sounddevice
@@ -57,7 +56,8 @@ async def main():
                     #websocket returned a partial response, ignore
                     continue
 
-                if command != "" and command.startswith("assistant"):
+                if command != "" and "assistant" in command:
+                    command = command.partition("assistant ")[2]
 
                     #call the parser to translate and execute the command
                     response, action = commands.execute(command)

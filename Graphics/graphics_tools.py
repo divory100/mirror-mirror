@@ -4,7 +4,7 @@ import PySimpleGUI as psg
 import requests #library for performing http requests on webpages
 import time
 
-with open("openweathermap_key.json", "r") as file:
+with open("Keys/openweathermap_key.json", "r") as file:
     j = json.load(file)
     key = j["key"]
     lat = j["lat"]

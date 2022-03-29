@@ -28,6 +28,26 @@ def execute(command):
             #check for subcommands
             arguments = command.partition(keyword)[2]
             details = parser[keyword]
+
+            subcommand = None
+            if "subcommands" in details:
+                #command has subcommands
+                for elem in details["subcommands"]:
+                    if elem in arguments:
+                        subcommand = elem
+                        break
+
+            if "params" in details:
+                #command has parameters
+                params = arguments if subcommand is None else arguments.partition(subcommand)[2]
+                params = params.strip(" ")
+                if params == "":
+                    params = None
+            else:
+                params = None
+
+
+
             try:
                 subcommand = None
                 for subc in details["subcommands"]:
@@ -38,13 +58,15 @@ def execute(command):
                 #The command doesn't have any subcommands
                 subcommand = None
             #execute the command's function
-            response = command_function(parser[keyword]["func"], subcommand=subcommand)
+            response = command_function(parser[keyword]["func"], subcommand=subcommand, params=params)
 
     return response["speech"], response["action"]
 
-def command_function(func, subcommand=None, window=None):
+def command_function(func, subcommand=None, params=None, window=None):
     """Function to 'eval' the command's function with arguments"""
+    args = ""
     if subcommand is not None:
-        return eval(f"{func}(subcommand='{subcommand}')")
-    else:
-        return eval(f"{func}()")
+        args += f"subcommand='{subcommand}'" if params is None else f"subcommand='{subcommand}', "
+    if params is not None:
+        args += f"params='{params}'"
+    return eval(f"{func}({args})")

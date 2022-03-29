@@ -3,7 +3,7 @@ import json
 import requests
 
 #open file that holds API key
-with open("openweathermap_key.json", "r") as fp:
+with open("Keys/openweathermap_key.json", "r") as fp:
     j = json.load(fp)
     key = j["key"]
     lat = j["lat"]
