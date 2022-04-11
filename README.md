@@ -1,6 +1,8 @@
 # Mirror Mirror
 *A program to run a voice assistant with a graphical status display*
 
+## NOTE: currently undergoing major rework, will be rebranded after that
+
 I created this to be run on a raspberry pi magic mirror and be like mirror mirror on the wall from shrek/snow white, hence the name.
 
 ## Details
